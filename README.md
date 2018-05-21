@@ -48,10 +48,28 @@ Example Playbook
 
 Including an example of how to use the role :
 
-    - hosts: server
-      become: true
-      roles:
-         - wiseflat.peertube
+	---
+	- hosts: server
+	  become: true
+	  roles:
+	    - geerlingguy.postgresql
+	    - geerlingguy.nodejs
+	    - geerlingguy.nginx
+	    - geerlingguy.certbot
+	  tasks:
+
+	    - name: Use certbot to test certificate creation
+	      command: /usr/bin/certbot certonly --agree-tos --register-unsafely-without-email --test-cert --renew-by-default --webroot -w /var/www/html/ -d {{ peertube_domain }}
+
+	    - name: Use certbot to generate certificate
+	      command: /usr/bin/certbot certonly --agree-tos --renew-by-default --register-unsafely-without-email --webroot -w /var/www/html/ -d {{ peertube_domain }}
+
+
+	- hosts: peertube
+	  become: true
+	  roles:
+	    - wiseflat.peertube
+
 
 License
 -------
