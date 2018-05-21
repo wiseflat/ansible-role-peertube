@@ -1,38 +1,64 @@
-ansible-role-peertube
+Ansible Role: Peertube
 =========
 
-A simple way to install peertube with ansible
+Installs [Peertube](https://github.com/Chocobozzz/PeerTube) for Ubuntu.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This role only runs on Ubuntu
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Available variables are listed below, along with default values (see `defaults/main.yml`):
+
+
+	peertube_version: v1.0.0-beta.4
+	peertube_domain: peertube.example.com
+	peertube_admin_email: peertube@example.com
+	peertube_database_suffix: _prod
+	peertube_database_username: peertube
+	peertube_database_password: peertube
+
+	peertube_smtp_hostname: smtp.example.com
+	peertube_smtp_port: 465
+	peertube_smtp_username: peertube@example.com
+	peertube_smtp_password: "eid2wueRudiv3ToX0oLkjnHy5rT("
+	peertube_smtp_tls: true
+	peertube_smtp_disable_starttls: false
+	peertube_smtp_ca_file: null # Used for self signed certificates
+	peertube_smtp_from_address: 'peertube@example.com'
+
+	peertube_instance_name: PeerTube
+	peertube_instance_short_description: 'PeerTube, a federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent and Angular.'
+	peertube_instance_description: ""
+	peertube_instance_terms: ""
+	peertube_services_twitter_username: '@Chocobozzz'
+	peertube_services_twitter_whitelisted: false
+
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Including an example of how to use the role :
 
-    - hosts: servers
+    - hosts: server
+      become: true
       roles:
-         - { role: username.rolename, x: 42 }
+         - wiseflat.peertube
 
 License
 -------
 
-BSD
+license GPLv3
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+This role was created by [Mathieu Garcia](https://www.github.com/wiseflat)
