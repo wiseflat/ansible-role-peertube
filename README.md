@@ -49,7 +49,7 @@ Example Playbook
 Including an example of how to use the role :
 
 	---
-	- hosts: server
+	- hosts: peertube
 	  become: true
 	  roles:
 	    - geerlingguy.postgresql

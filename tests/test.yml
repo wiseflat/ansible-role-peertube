@@ -1,5 +1,5 @@
 ---
-- hosts: server
+- hosts: peertube
   become: true
   roles:
     - geerlingguy.postgresql
