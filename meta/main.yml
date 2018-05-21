@@ -16,5 +16,9 @@ galaxy_info:
   galaxy_tags:
     - peertube
 
-dependencies: []
-  
+dependencies:
+  - { role: nodejs, geerlingguy.nodejs }
+  - { role: postgresql, geerlingguy.postgresql }
+  - { role: nginx, geerlingguy.nginx }
+  - { role: certbot, src: git+https://github.com/geerlingguy/ansible-role-certbot.git }
+  - { role: yarn, src: git+https://github.com/ocha/ansible-role-yarn.git }
