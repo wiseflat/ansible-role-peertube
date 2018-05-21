@@ -3,7 +3,7 @@ galaxy_info:
   description: An ansible role to install peertube
   company: Wiseflat
 
-  issue_tracker_url: https://github.com/wiseflat/ansible-role-peertube/issue/tracker
+  issue_tracker_url: https://github.com/wiseflat/ansible-role-peertube/issues
 
   license: license GPLv3
 
