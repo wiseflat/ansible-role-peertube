@@ -23,18 +23,17 @@ dependencies:
   # - { role: certbot, src:git+https://github.com/geerlingguy/ansible-role-certbot.git }
   # - { role: yarn, src:git+https://github.com/ocha/ansible-role-yarn.git }
 
-  - name: nodejs
+  - name: geerlingguy.nodejs
     src: geerlingguy.nodejs
 
-  - name: postgresql
+  - name: geerlingguy.postgresql
     src: geerlingguy.postgresql
 
-  - name: nginx
+  - name: geerlingguy.nginx
     src: geerlingguy.nginx
 
-  - name: certbot
+  - name: geerlingguy.certbot
     src: git+https://github.com/geerlingguy/ansible-role-certbot.git
 
-  - name: yarn
-    src: ocha.yarn
-    # git+https://github.com/ocha/ansible-role-yarn.git
+  - name: ocha.yarn
+    src: git+https://github.com/ocha/ansible-role-yarn.git
