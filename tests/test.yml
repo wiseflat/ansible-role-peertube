@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  become: true
+  roles:
+    - geerlingguy.nodejs
+    - ANXS.postgresql
+    - ansible-role-peertube

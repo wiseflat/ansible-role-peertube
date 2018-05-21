@@ -1,0 +1,20 @@
+galaxy_info:
+  author: Mathieu Garcia
+  description: An ansible role to install peertube
+  company: Wiseflat
+
+  issue_tracker_url: https://github.com/wiseflat/ansible-role-peertube/issue/tracker
+
+  license: license GPLv3
+
+  min_ansible_version: 2.3
+
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  galaxy_tags:
+    - peertube
+
+dependencies: []
+  
